@@ -1,10 +1,12 @@
 
 public class Sundae extends IceCream {
 	protected int cost;
+	protected String toppingName;
 
 	public Sundae(String IceCreamName, int IceCreamCost, String toppingName, int toppingCost) {
 		super(IceCreamName,IceCreamCost);
 		cost = IceCreamCost + toppingCost;
+		this.toppingName = toppingName;
 	}
 	
 	@Override
@@ -14,7 +16,8 @@ public class Sundae extends IceCream {
 	
 	@Override
 	public  String getInfo(){
-		return null;
+		System.out.println(this.toppingName + " Sundae with");
+		return "";
 	}
 
 }
